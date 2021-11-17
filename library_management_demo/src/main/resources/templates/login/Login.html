@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Book Library System</title>
+  <link href="/login/loginPage.css" rel="stylesheet">
+
+<!--  <th:block th:replace="fragments/styles :: common"></th:block>-->
+
+</head>
+<body class="login">
+<div>
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+      <!-- Tabs Titles -->
+      <h2 class="active"> Sign In </h2>
+
+<!--      &lt;!&ndash; Icon &ndash;&gt;-->
+<!--      <div class="fadeIn first">-->x`
+<!--        <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />-->
+<!--      </div>-->
+
+      <!-- Login Form -->
+      <form th:action="@{login}" method="post" id="loginform">
+        <input type="text" th:placeholder="Username" th:name="username"  id="userName" class="fadeIn second"/>
+        <input type="password" th:placeholder="Password" th:name="password"  id="passWord" class="fadeIn third" />
+        <input type="submit" class="fadeIn fourth" value="Log In">
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

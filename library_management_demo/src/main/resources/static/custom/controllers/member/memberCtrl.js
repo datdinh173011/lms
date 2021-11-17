@@ -1,0 +1,1 @@
+app.controller('memberCtrl',['$scope','libraryService','$mdDialog'])
