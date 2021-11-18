@@ -51,7 +51,7 @@ function returnBookConfirm() {
 	if( checked > 0 ) {
 		var total = jQuery('.returnBookChk').length;
 		if( total == checked ) {
-			$.get('/api/issue/'+ selectedIssueId + '/return/all', function(msg) {
+			$.get('/rest/issue/'+ selectedIssueId + '/return/all', function(msg) {
 				if( msg == 'successful' ) {
 					window.location = '/api/issue/list';
 				}
@@ -61,7 +61,7 @@ function returnBookConfirm() {
 			jQuery('.returnBookChk:checkbox:checked').each(function (i){
 				ids.push( $(this).val() );
 			});
-			$.post( '/api/issue/'+selectedIssueId+'/return' , {ids: ids.join(',')} ).done(function (msg){
+			$.post( '/rest/issue/'+selectedIssueId+'/return' , {ids: ids.join(',')} ).done(function (msg){
 				if( msg=='successful' ) {
 					window.location = '/api/issue/list';
 				}

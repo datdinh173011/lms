@@ -61,7 +61,7 @@
                                         th:text="${#dates.year(#dates.createToday()) - #dates.year(m.dateOfBirth)}"></td>
                                 <td th:text="${#dates.format(m.joiningDate, 'dd-MMM-yyyy')}"></td>
                                 <td>
-                                    <a th:href="@{'/member/edit/' + ${m.id}}"><i class="fa fa-edit"></i></a>
+                                    <a th:href="@{'/api/member/edit/' + ${m.id}}"><i class="fa fa-edit"></i></a>
                                     <a data-toggle="modal" data-target=".remove-member-modal" onclick="removeMemberDialog(this);"
                                        th:data-member-id="${m.id}" th:data-member-name="${m.firstName + ' ' + m.middleName + ' ' + m.lastName}"
                                        style="cursor: pointer;">
